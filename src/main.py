@@ -135,6 +135,8 @@ lua.globals().create_list_box = create_list_box
 lua.globals().add_list_box_item = add_list_box_item
 lua.globals().remove_list_box_item = remove_list_box_item
 lua.globals().create_scrolled_text = create_scrolled_text
+lua.globals().create_radio_button = create_radio_button
+lua.globals().create_check_button = create_check_button
 lua.globals().wait = wait
 
 current_dir = os.path.dirname(os.path.abspath(__file__))

@@ -11,3 +11,5 @@ local listbox = create_list_box(nil, 200, 200)
 local menu_bar = create_menu_bar()
 
 create_menu_child(menu_bar, "File")
+
+create_radio_button()
