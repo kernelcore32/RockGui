@@ -116,11 +116,11 @@ def create_check_button(state=None, command=None, x=None, y=None, text=None, cur
     check_button.place(x=x, y=y)
     return check_button
 
-def create_radio_button(state=None, command=None, x=None, y=None, text=None, cursor=None, font=None, bg_color=None, height=None, width=None):
-    global root
-    radio_button = tk.Radiobutton(root, state=state, command=command, text=text, cursor=cursor, font=font, bg=bg_color, height=height, width=width)
-    radio_button.place(x=x, y=y)
-    return radio_button
+#def create_radio_button(text=None, command=None, x=None, y=None, cursor=None, font=None, bg_color=None, height=None, width=None, value=None):
+#    global root
+#    radio_button = tk.Radiobutton(root, text=text, command=command, cursor=cursor, font=font, bg=bg_color, height=height, width=width, value=value)
+#    radio_button.place(x=x, y=y)
+#    return radio_button
 
 lua = LuaRuntime(unpack_returned_tuples=True)
 lua.globals().create_window = create_window
@@ -135,7 +135,7 @@ lua.globals().create_list_box = create_list_box
 lua.globals().add_list_box_item = add_list_box_item
 lua.globals().remove_list_box_item = remove_list_box_item
 lua.globals().create_scrolled_text = create_scrolled_text
-lua.globals().create_radio_button = create_radio_button
+#lua.globals().create_radio_button = create_radio_button
 lua.globals().create_check_button = create_check_button
 lua.globals().wait = wait
 

@@ -1,4 +1,4 @@
-create_window("title", "600x500")
+create_window("title", "600x550")
 
 local function send_message(name)
     print("Hello from " .. name .. "!")
@@ -12,4 +12,8 @@ local menu_bar = create_menu_bar()
 
 create_menu_child(menu_bar, "File")
 
-create_radio_button()
+create_check_button("normal", function() send_message("interpreter") end, 300, 400)
+create_check_button("normal", function() send_message("interpreter") end, 300, 450)
+create_check_button("normal", function() send_message("interpreter") end, 300, 500)
+
+

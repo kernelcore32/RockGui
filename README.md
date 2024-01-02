@@ -84,11 +84,6 @@ The create_check_button function is used to create a check button for the window
 create_check_button("state of the check button", function() your_check_button_event() end, x axis placement, y axis placement, "text displayed on check button", "cursor style of check button", "font of check button", "background color of check button", height of check button, width of check button)
 ```
 
-The create_radio_button function is used to create a radio button for the window which can be used for one-selection systems and on/off options.
-```lua
-create_radio_button("state of the radio button", function() your_radio_button_event() end, x axis placement, y axis placement, "text displayed on radio button", "cursor style of radio button", "font of radio button", "background color of radio button", height of radio button, width of radio button)
-```
-
 The create_list_box function is used to create a list box for the window which can be used for displaying files, processes, directories, items and objects.
 ```lua
 create_list_box("state of list box", y axis placement, x axis placement, "background color of list box", height of list box, width of list box, "active style of list box", "relief of list box")
