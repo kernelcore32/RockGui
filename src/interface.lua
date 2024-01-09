@@ -1,7 +1,14 @@
 create_window("title", "600x550")
 
-local function send_message(name)
-    print("Hello from " .. name .. "!")
+local toggle = false
+
+function toggleState()
+    toggle = not toggle
+    if toggle then
+        print("Hello from interpreter!")
+    else
+        print("Not hello")
+    end
 end
 
 create_button("click me", function() send_message("interpreter") end, 100, 100)
@@ -12,8 +19,4 @@ local menu_bar = create_menu_bar()
 
 create_menu_child(menu_bar, "File")
 
-create_check_button("normal", function() send_message("interpreter") end, 300, 400)
-create_check_button("normal", function() send_message("interpreter") end, 300, 450)
-create_check_button("normal", function() send_message("interpreter") end, 300, 500)
-
-
+create_check_button("normal", function() toggleState() end, 300, 400)

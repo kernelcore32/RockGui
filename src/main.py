@@ -3,7 +3,7 @@ import os
 import time
 import tkinter as tk
 from tkinter.ttk import Separator
-from tkinter import scrolledtext
+from tkinter import scrolledtext, messagebox
 from lupa import LuaRuntime
 
 """

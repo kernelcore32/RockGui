@@ -1,6 +1,10 @@
-# You can only use this method on Windows 11 or Windows 10.
+.PHONY: run_windows run_mac run_linux
 
-.PHONY: run
-
-run:
+run_windows:
 	py main.py
+
+run_mac:
+	python3 main.py
+
+run_linux:
+	python3 main.py
