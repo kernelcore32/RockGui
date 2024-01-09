@@ -99,6 +99,11 @@ Deletes the index of a list box item.
 remove_list_box_item(the listbox, "Item to remove")
 ```
 
+Shows a message box.
+```lua
+show_message_box("title of message box", "message box description / message", "icon type: error, info, warning, etc.")
+```
+
 ## Versions
 These are the supported versions of Rock Gui.
 
