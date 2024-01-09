@@ -19,6 +19,8 @@ local menu_bar = create_menu_bar()
 
 create_menu_child(menu_bar, "File")
 
+add_list_box_item(listbox, "Item 1")
+
 create_check_button("normal", function() toggleState() end, 300, 400)
 
 show_message_box("Error", "what", "info")
