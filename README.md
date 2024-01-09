@@ -11,7 +11,7 @@ Rock gui is a python tkinter library wrapped around lua to create graphical user
 ## Installation
 To install RockGui you'll have to download the source files or clone the github repository to your local computer. Locate the directory to RockGui and open the src folder.
 Drag the 'main.py' file from the src folder to your project's directory. Execute the 'main.py' file whenever you are using the provided functions from Rock Gui in lua. 
-To execute the 'main.py' file you are required to own Python and the Lupa library which you can download at https://python.org and https://pypi.org/project/lupa/. 
+To execute the 'main.py' file you are required to own Python, the Numba library and the Lupa library which you can download at https://python.org, https://pypi.org/project/numba/ and https://pypi.org/project/lupa/. 
 If you find any issues or you have any questions you want to ask, you can do so at the Issues tab located in our github repository or at our email teamkernelcore64@proton.me.
 
 ### Execution Command
@@ -28,7 +28,9 @@ python3 -m main
 
 Makefile
 ```bash
-make run
+make run_windows
+make run_mac
+make run_linux
 ```
 
 ## Usage & Functions
