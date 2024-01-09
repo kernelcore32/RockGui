@@ -1,3 +1,4 @@
+# -- Imported modules
 import os
 import time
 import tkinter as tk
@@ -39,6 +40,7 @@ under the License.
 
 global root
 
+# -- Wait function
 def wait(s):
     time.sleep(s)
 
@@ -119,12 +121,14 @@ def create_check_button(state=None, command=None, x=None, y=None, text=None, cur
 def show_message_box(title=None, message=None, type=None):
     messagebox.showinfo(title, message, icon=type)
 
+# -- Had to be removed. We are planning to add radio buttons back someday...
 #def create_radio_button(text=None, command=None, x=None, y=None, cursor=None, font=None, bg_color=None, height=None, width=None, value=None):
 #    global root
 #    radio_button = tk.Radiobutton(root, text=text, command=command, cursor=cursor, font=font, bg=bg_color, height=height, width=width, value=value)
 #    radio_button.place(x=x, y=y)
 #    return radio_button
 
+# -- Lua global enviroment
 lua = LuaRuntime(unpack_returned_tuples=True)
 lua.globals().create_window = create_window
 lua.globals().create_button = create_button
@@ -142,10 +146,12 @@ lua.globals().create_scrolled_text = create_scrolled_text
 lua.globals().create_check_button = create_check_button
 lua.globals().wait = wait
 
+# -- Execute any files ending with the .lua format
 current_dir = os.path.dirname(os.path.abspath(__file__))
 for file_name in os.listdir(current_dir):
     if file_name.endswith(".lua"):
         lua_script_path = os.path.join(current_dir, file_name)
         lua.execute(open(lua_script_path).read())
 
+# -- The mainloop
 root.mainloop()
