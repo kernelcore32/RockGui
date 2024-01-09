@@ -116,6 +116,9 @@ def create_check_button(state=None, command=None, x=None, y=None, text=None, cur
     check_button.place(x=x, y=y)
     return check_button
 
+def show_message_box(title=None, message=None, type=None):
+    messagebox.showinfo(title, message, icon=type)
+
 #def create_radio_button(text=None, command=None, x=None, y=None, cursor=None, font=None, bg_color=None, height=None, width=None, value=None):
 #    global root
 #    radio_button = tk.Radiobutton(root, text=text, command=command, cursor=cursor, font=font, bg=bg_color, height=height, width=width, value=value)
