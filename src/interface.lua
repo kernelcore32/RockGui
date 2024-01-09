@@ -11,7 +11,7 @@ function toggleState()
     end
 end
 
-create_button("click me", function() send_message("interpreter") end, 100, 100)
+create_button("click me", function() print("interpreter") end, 100, 100)
 
 local listbox = create_list_box(nil, 200, 200)
 
@@ -20,3 +20,5 @@ local menu_bar = create_menu_bar()
 create_menu_child(menu_bar, "File")
 
 create_check_button("normal", function() toggleState() end, 300, 400)
+
+show_message_box("Error", "what", "info")

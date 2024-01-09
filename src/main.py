@@ -4,6 +4,7 @@ import time
 import tkinter as tk
 from tkinter.ttk import Separator
 from tkinter import scrolledtext, messagebox
+from numba import jit
 from lupa import LuaRuntime
 
 """
@@ -41,6 +42,7 @@ under the License.
 global root
 
 # -- Wait function
+@jit
 def wait(s):
     time.sleep(s)
 
@@ -142,6 +144,7 @@ lua.globals().create_list_box = create_list_box
 lua.globals().add_list_box_item = add_list_box_item
 lua.globals().remove_list_box_item = remove_list_box_item
 lua.globals().create_scrolled_text = create_scrolled_text
+lua.globals().show_message_box = show_message_box
 #lua.globals().create_radio_button = create_radio_button
 lua.globals().create_check_button = create_check_button
 lua.globals().wait = wait
